@@ -1,3 +1,4 @@
+import { add, multiply } from './utils.js';
 import React, { Component } from 'react';
 let data = require('./fake.json');
 class App extends Component {
@@ -7,6 +8,8 @@ class App extends Component {
     this.state = {
       data: 'constructor'
     }
+    console.log("add " + add(10, 10 ))
+    console.log("mult " + multiply(10, 10 ))
   }
 
   componentDidMount(){
