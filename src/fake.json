@@ -1,0 +1,18 @@
+{
+    "aaa/bbb/ccc":[
+        "aaa/zzz/ddd",
+        "aaa/zzz/eee",
+        "aaa/yyy/fff",
+        "aaa/ddd/ggg"
+    ],
+    "aaa/bbb/ddd":[
+        "aaa/ooo/finch",
+        "aaa/ooo/wren",
+        "aaa/ooo/swift"
+    ],
+    "aaa/ooo/finch":[],
+    "aaa/ooo/wren":[],
+    "aaa/ooo/swift":[
+        "aaa/bbb/ccc"
+    ]
+}
