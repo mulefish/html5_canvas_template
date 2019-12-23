@@ -1,18 +1,181 @@
 {
-    "aaa/bbb/ccc":[
-        "aaa/zzz/ddd",
-        "aaa/zzz/eee",
-        "aaa/yyy/fff",
-        "aaa/ddd/ggg"
-    ],
-    "aaa/bbb/ddd":[
-        "aaa/ooo/finch",
-        "aaa/ooo/wren",
-        "aaa/ooo/swift"
-    ],
-    "aaa/ooo/finch":[],
-    "aaa/ooo/wren":[],
-    "aaa/ooo/swift":[
-        "aaa/bbb/ccc"
-    ]
+  "src/request/type2/Old_World_sparrows": [
+    "src/controller/Arabian_golden_sparrow",
+    "src/resourcesSociable_weaver",
+    "react-dom"
+  ],
+  "src/request/type2/Saxaul_sparrow": [],
+  "src/request/type1/House_sparrow": [
+    "src/controller/Arabian_golden_sparrow"
+  ],
+  "test/jest/Italian_sparrow": [
+    "test/jest/Swainson's_sparrow"
+  ],
+  "test/jest/Spanish_sparrow": [
+    "server/database/Weavers"
+  ],
+  "test/resources/Sind_sparrow": [
+    "src/request/type2/Saxaul_sparrow"
+  ],
+  "src/request/type2/Somali_sparrow": [],
+  "src/request/type2/Russet_sparrow": [
+    "src/request/type2/Plain-backed_snowfinch"
+  ],
+  "test/resources/Plain-backed_sparrow": [
+    "test/resources/White-winged_snowfinch"
+  ],
+  "test/jest/Dead_Sea_sparrow": [
+    "@_"
+  ],
+  "src/controller/Iago_sparrow": [],
+  "src/utils/Great_sparrow": [
+    "react",
+    "@_"
+  ],
+  "src/request/type1/Kenya_sparrow": [],
+  "test/jest/Kordofan_sparrow": [
+    "test/jest/Spanish_sparrow"
+  ],
+  "test/resources/Shelley's_sparrow": [
+    "src/utils/Black-rumped_waxbill",
+    "src/resourcesCut-throat_finch",
+    "@MaterialUI"
+  ],
+  "server/cache/Socotra_sparrow": [
+    "test/resources/Red-billed_quelea",
+    "@_"
+  ],
+  "src/utils/Abd_al-Kuri_sparrow": [
+    "test/jest/Sudan_golden_sparrow"
+  ],
+  "server/database/Cape_sparrow": [
+    "server/cache/Chestnut_munia"
+  ],
+  "src/resourcesNorthern_grey-headed_sparrow": [
+    "src/request/type1/Rock_sparrow",
+    "server/cache/Green-winged_pytilia"
+  ],
+  "test/jest/Swainson's_sparrow": [],
+  "src/request/type1/Parrot-billed_sparrow": [
+    "test/resources/Red-billed_quelea",
+    "test/resources/White-winged_snowfinch"
+  ],
+  "test/resources/Swahili_sparrow": [
+    "@_"
+  ],
+  "server/cache/Southern_grey-headed_sparrow": [],
+  "test/jest/Desert_sparrow": [
+    "test/resources/Red-billed_quelea"
+  ],
+  "server/database/Eurasian_tree_sparrow": [],
+  "test/jest/Sudan_golden_sparrow": [
+    "react"
+  ],
+  "src/controller/Arabian_golden_sparrow": [],
+  "src/resourcesChestnut_sparrow": [],
+  "server/cache/Rock_sparrows": [
+    "server/cache/Chestnut_munia",
+    "src/controller/Arabian_golden_sparrow"
+  ],
+  "src/utils/Yellow-spotted_petronia": [
+    "src/request/type2/Red-browed_finch"
+  ],
+  "server/cache/Yellow-throated_sparrow": [
+    "src/resourcesSociable_weaver",
+    "@Material"
+  ],
+  "src/request/type2/Yellow-throated_petronia": [],
+  "server/database/Bush_petronia": [],
+  "src/request/type1/Rock_sparrow": [
+    "react-dom"
+  ],
+  "test/jest/Snowfinches_(sparrows)": [
+    "test/jest/Sudan_golden_sparrow"
+  ],
+  "test/resources/White-winged_snowfinch": [],
+  "src/request/type1/Black-winged_snowfinch": [
+    "react-dom"
+  ],
+  "src/utils/White-rumped_snowfinch": [
+    "test/jest/Kordofan_sparrow",
+    "@MaterialUI"
+  ],
+  "src/request/type2/Pere_David's_snowfinch": [
+    "react"
+  ],
+  "src/request/type2/Rufous-necked_snowfinch": [
+    "@MaterialUI"
+  ],
+  "src/request/type2/Plain-backed_snowfinch": [],
+  "src/utils/Afghan_snowfinch": [],
+  "server/database/Weavers": [],
+  "src/resourcesSociable_weaver": [
+    "test/jest/Java_sparrow",
+    "src/request/type1/Pink-throated_twinspot"
+  ],
+  "src/utils/White-billed_buffalo_weaver": [
+    "src/utils/Afghan_snowfinch"
+  ],
+  "server/database/Speckle-fronted_weaver": [],
+  "src/controller/White-headed_buffalo_weaver": [],
+  "test/jest/Cape_weaver": [
+    "test/jest/Italian_sparrow",
+    "test/resources/Sind_sparrow"
+  ],
+  "server/cache/Southern_masked_weaver": [
+    "@Material"
+  ],
+  "src/resourcesJackson's_widowbird": [
+    "src/request/type2/Saxaul_sparrow",
+    "@_"
+  ],
+  "src/controller/Spectacled_weaver": [
+    "test/jest/Dead_Sea_sparrow",
+    "src/utils/Abd_al-Kuri_sparrow",
+    "@Material"
+  ],
+  "test/resources/Red-billed_quelea": [],
+  "server/cache/Waxbills_and_relatives": [
+    "server/database/Bush_petronia"
+  ],
+  "server/cache/Green-winged_pytilia": [],
+  "src/request/type1/Pink-throated_twinspot": [
+    "server/cache/Rock_sparrows",
+    "server/database/Weavers"
+  ],
+  "src/resourcesCut-throat_finch": [
+    "react"
+  ],
+  "src/resourcesWestern_bluebill": [
+    "@_"
+  ],
+  "src/request/type1/Red-billed_firefinch": [
+    "src/request/type1/Kenya_sparrow"
+  ],
+  "src/request/type1/Purple_grenadier": [],
+  "src/utils/Black-rumped_waxbill": [],
+  "src/request/type1/Orange-breasted_waxbill": [
+    "@MaterialUI"
+  ],
+  "src/controller/Painted_finch": [
+    "test/resources/Swahili_sparrow"
+  ],
+  "src/resourcesZebra_finch": [
+    "server/cache/Yellow-throated_sparrow",
+    "test/resources/Plain-backed_sparrow"
+  ],
+  "src/request/type2/Red-browed_finch": [
+    "@_"
+  ],
+  "test/resources/Blue-faced_parrotfinch": [
+    "test/jest/Desert_sparrow",
+    "react"
+  ],
+  "src/controller/Gouldian_finch": [],
+  "server/cache/Chestnut_munia": [
+    "src/resourcesNorthern_grey-headed_sparrow"
+  ],
+  "test/jest/Java_sparrow": [
+    "server/cache/Rock_sparrows"
+  ]
 }
