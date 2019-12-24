@@ -10,9 +10,9 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 
 const columns = [
-  { id: 'name', label: 'name' },
   { id: 'id', label: 'id' },
-  { id: 'dependancies', label: 'dependancies' },
+  { id: 'name', label: 'name' },
+  { id: 'dependancies', label: 'dependancies' }
 ];
 
 function createData(id, name, dependancies) {
@@ -24,10 +24,9 @@ let rows = [
 
 const useStyles = makeStyles({
   root: {
-    width: '90%',
+    width: '100%',
   },
   container: {
-    maxHeight: 440,
   },
 });
 
@@ -42,18 +41,10 @@ export default function StickyHeadTable(props) {
     for ( let name in d ) {
         try {
             const id = l[name]
-
-//            console.log( "___ " + k + "   " + JSON.stringify(d[) + "  and " + l[k])
-            rows.push(createData(id, name, d[name]))
+            rows.push(createData(id, name, JSON.stringify(d[name])))
         } catch(boom) {
-            console.log("ACK! " + name + "    " + boom )            
         }
     }
- 
-
-//  console.log( "DATA\n" + JSON.stringify( props.data , null, 2  ))
-//  console.log( "LOOKUP\n" + JSON.stringify( props.lookup , null, 2  ))
-
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -62,11 +53,13 @@ export default function StickyHeadTable(props) {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
-
+  const rowClick = (id ) => {
+    alert(  id )
+  }
   return (
-    <Paper className={classes.root}>
-      <TableContainer className={classes.container}>
-        <Table stickyHeader aria-label="sticky table">
+    <div>
+      <TableContainer>
+        <Table>
           <TableHead>
             <TableRow>
               {columns.map(column => (
@@ -83,7 +76,7 @@ export default function StickyHeadTable(props) {
           <TableBody>
             {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => {
               return (
-                <TableRow hover key={"r" + Math.random() }role="checkbox" tabIndex={-1} key={row.code}>
+                <TableRow onClick={(e) => rowClick(row.id)} hover key={"r" + Math.random() } tabIndex={-1} key={row.code}>
                   {columns.map(column => {
                     const value = row[column.id];
                     return (
@@ -107,6 +100,6 @@ export default function StickyHeadTable(props) {
         onChangePage={handleChangePage}
         onChangeRowsPerPage={handleChangeRowsPerPage}
       />
-    </Paper>
+    </div>
   );
 }
