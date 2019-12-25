@@ -1,22 +1,18 @@
-import { getNextId,findXY_givenAngle_andDistance } from './utils.js';
+import { sortArray, getNextId,findXY_givenAngle_andDistance } from './utils.js';
 import React, { Component } from 'react';
 import 'typeface-roboto';
 import MyOtherTable from "./MyOtherTable";
+import Node from "./Node.js";
+const json = require('./fake.json');
 
-
-const data = require('./fake.json');
 class App extends Component {
 
   constructor(props){
     super(props);
     this.state = {
-      data:"dog"
     }
   }
-
-
   componentDidMount(){
-
     const c = document.getElementById("background");
     this.bg = c.getContext("2d");
     this.bg.font = "12px Arial";
@@ -24,33 +20,31 @@ class App extends Component {
     const c2 = document.getElementById("foreground");
     this.fg = c2.getContext("2d");
 
-    let lookup = {} 
-    for ( let key in data ) {
-      let id = getNextId()
-      lookup[key] = id
+    let nodes = [] 
+    let lookup = {}
+    for ( let fileName in json ) {
+      const ary = json[fileName]
+      nodes.push(new Node(fileName, ary))
     }
+    nodes = sortArray(nodes) // sort on number of 'out' edges
+    nodes.forEach((node) => { 
+      lookup[node.file] = getNextId()
+      node.setId( lookup[node.file])      
+    })
 
-    this.setState({"lookup":lookup})
-    this.setState({"data":data})
+    this.setState({"data":nodes})        
     this.addPoints()
+
+
   }
 
   addPoints() { 
-
-    for ( let k in this.state.data ) { 
-      let o = this.state.data[k]
-      console.log( o )
-
-    }
-
-
-    this.bg.beginPath();
+    this.bg.beginPath();  
     const cx = 200
     const cy = 200
     const radius = 50
     this.bg.arc(cx, cy, radius, 0, 2 * Math.PI);
     this.bg.stroke();
-
 
     let degree = 0 
 
@@ -83,8 +77,6 @@ class App extends Component {
         height: window.innerHeight * 0.61 + '500px'
       };
 
-
-
       return (
         <div className="viewport">
           <div className='wrapper' style={dimensions}>
@@ -93,7 +85,7 @@ class App extends Component {
           </div>
  
 
-        <MyOtherTable data={this.state.data} lookup={this.state.lookup} />
+        <MyOtherTable data={this.state.data}  />
  </div>
       );
   }

@@ -1,30 +1,42 @@
 
-let currentId = undefined
+/* Collection of helper methods - no theme */ 
+function compare(a, b) {
+  if (a.ary.length > b.ary.length) return -1;
+  if (b.ary.length > a.ary.length) return 1;
+
+  return 0;
+}
+
+export function sortArray(LoL) {
+  LoL = LoL.sort(compare)
+  return LoL
+}
+
+
+let currentId_neededForgetNextIdFunc = undefined
 export function getNextId() {
-  currentId = _logic(currentId)
-  return currentId
-}
-
-function _logic(str) {
-  if (! str) {
-    return 'A'
-  }			
-  let tail = ''
-  let i = str.length -1
-  let char = str[i]
-  // find the index of the first character from the right that is not a 'Z'
-  while (char === 'Z' && i > 0) {
-    i--
-    char = str[i]
-    tail = 'A' + tail   // tail contains a string of 'A'
+  const logic = (str) => {
+    if (! str) {
+      return 'A'
+    }			
+    let tail = ''
+    let i = str.length -1
+    let char = str[i]
+    // find the index of the first character from the right that is not a 'Z'
+    while (char === 'Z' && i > 0) {
+      i--
+      char = str[i]
+      tail = 'A' + tail   // tail contains a string of 'A'
+    }
+    if (char === 'Z') {  // the string was made only of 'Z'
+      return 'AA' + tail
+    }
+    // increment the character that was not a 'Z'
+    return str.slice(0, i) + String.fromCharCode(char.charCodeAt(0) + 1) + tail
   }
-  if (char === 'Z') {  // the string was made only of 'Z'
-    return 'AA' + tail
-  }
-  // increment the character that was not a 'Z'
-  return str.slice(0, i) + String.fromCharCode(char.charCodeAt(0) + 1) + tail
+  currentId_neededForgetNextIdFunc = logic(currentId_neededForgetNextIdFunc)
+  return currentId_neededForgetNextIdFunc
 }
-
 
 export function findXY_givenAngle_andDistance (x, y, angle, distance) {
     var result = {}
